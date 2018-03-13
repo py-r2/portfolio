@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title> Login page </title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class="container">
+        <h1> Collecting data </h1>
+        <h3> Please enter your login name, password, email address and company name.</h3>
+        <form action={{url_for('create')}} method="POST">
+          <input title="Your full name please." placeholder="Enter your full name" type="text" name="user_name" required><br>
+          <input class="password" title="Your password plese." placeholder="Enter your password" type="text" name="user_password" required><br>
+          <input title="Your email address should go here." placeholder="Enter your email address" type="email" name="email_address" required><br>
+          <input title="Your company name." placeholder="Enter your company name" type="text" name="company_name" required><br>
+          <button type="submit"> Submit </button>
+        </form>
+
+      </div>
+    </body>
+
+</html>

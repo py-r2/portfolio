@@ -1,0 +1,5 @@
+-Small Flask application that is asking for user to use an existing email address and password.
+-If the email address is new then user is redirected to a webpage where he can create a login account.
+-If the provided credentials are validated against PostqreSQL database then user is going to a "successful" page.
+-The password is in clear for testing purposes.
+-email address has to be a valid format of an email and is mandatory.
