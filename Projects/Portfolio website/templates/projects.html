@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+
+        <title>Romeo's Python Blog</title>
+
+        <link rel="stylesheet" href="../static/pure-min.css">
+        <link rel="stylesheet" href="../static/grids-responsive-min.css">
+        <link rel="stylesheet" href="../static/main.css">
+    </head>
+    <body>
+        <div id="layout" class="pure-g">
+            <div class="sidebar pure-u-1 pure-u-md-1-4">
+              <a><img src="../static/img/code.jpeg" alt="" class="pure-img-responsive"></a>
+              <div class="header-index">
+                    <h1 class="brand-title">Romeo Rauta</h1>
+                    <h2 class="brand-tagline">Python-Flask Engineer</h2>
+
+                    <nav class="nav">
+                        <ul class="nav-list">
+                          <li class="nav-item"><a class="pure-button" href="{{ url_for('home') }}">Start Here</a></li>
+                          <li class="nav-item"><a class="pure-button" href="{{ url_for('articles') }}">Articles</a></li>
+                          <li class="nav-item"><a class="pure-button" href="{{ url_for('projects') }}">Projects</a></li>
+                          <li class="nav-item"><a class="pure-button" href="{{ url_for('about') }}">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="content pure-u-1 pure-u-md-3-4">
+                <div>
+
+<h1>My Projects</h1>
+<p>I've worked on a number of projects over the last year. You can learn more about them here.</p>
+<h2>Open-source Web Login Form (Python, Flask, PostgreSQL and Bootstrap)</h2>
+<p>To generate html code and design I used Bootstrap templates. For the database storage I used PostgreSQL
+and for the back end work I used Python and Flask. </p>
+<p><a href="https://github.com/py-r2/portfolio/tree/master/Projects/Flask_login_app">» Learn more about the project on GitHub</a></p>
+<h2>Cross-platform desktop bookstore application (Python, PyQT, SQLite)</h2>
+<p>This is one of my first projects. Front end has been built with PyQT and the back end in Python and SQLite. </p>
+<p><a href="https://github.com/py-r2/portfolio/tree/master/Projects/Bookstore">» Learn more about the project on GitHub</a></p>
+<h2>Personal Website &amp; Programming Blog (Python, Flask, HTML, CSS)</h2>
+<p>I guess you have seen this project already.. is the website you're playing with here! But if you want to see the code you should check here:</p>
+<p><a href="">» Learn more about the project on GitHub</a></p>
+<h2>Open-source Web Scraping Library (Python, Flask, PostgreSQL)</h2>
+<p>This project is currently under work in progress. You should check out later or if you have any questions drop me an email.</p>
+<p><a href="">» Learn more about the project on GitHub</a></p>
+
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
