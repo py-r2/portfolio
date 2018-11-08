@@ -17,11 +17,11 @@
                <a><img src="../static/img/code.jpeg" alt="" class="pure-img-responsive"></a>
                <div class="header-index">
                     <h1 class="brand-title">Romeo Rauta</h1>
-                    <h2 class="brand-tagline">Python-Flask Engineer</h2>
+                    <h2 class="brand-tagline">Python-Flask Developer</h2>
 
                     <nav class="nav">
                         <ul class="nav-list">
-                          <li class="nav-item"><a class="pure-button" href="{{ url_for('home') }}">Start Here</a></li>
+                          <li class="nav-item"><a class="pure-button" href="{{ url_for('home') }}">Home</a></li>
                           <li class="nav-item"><a class="pure-button" href="{{ url_for('articles') }}">Articles</a></li>
                           <li class="nav-item"><a class="pure-button" href="{{ url_for('projects') }}">Projects</a></li>
                           <li class="nav-item"><a class="pure-button" href="{{ url_for('about') }}">About</a></li>
@@ -34,15 +34,11 @@
                 <div>
 
                   <h1>My Blog Articles</h1>
-                  <h2><a href="{{ url_for('loadarticle')}}">Oh, what a Sunny Day</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                  <p>Published on 2016-11-01</p>
-                  <h2><a href="{{ url_for('loadarticle')}}">My First Post</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                  <p>Published on 2016-11-08</p>
-                  <h2><a href="{{ url_for('loadarticle')}}">My Second Post</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                  <p>Published on 2016-11-12</p>
+                  {% for item in alldata %}
+                  <h2><a href="{{ url_for('loadarticle',article_id=item.id) }}">{{item.title}}</a></h2>
+                  <p>{{item.article|truncate}}</p>
+                  <p>Published on: {{item.date_posted}}</p>
+                  {% endfor %}
 
                 </div>
             </div>

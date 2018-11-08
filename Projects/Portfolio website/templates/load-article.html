@@ -21,7 +21,7 @@
 
                     <nav class="nav">
                         <ul class="nav-list">
-                          <li class="nav-item"><a class="pure-button" href="{{ url_for('home') }}">Start Here</a></li>
+                          <li class="nav-item"><a class="pure-button" href="{{ url_for('home') }}">Home</a></li>
                           <li class="nav-item"><a class="pure-button" href="{{ url_for('articles') }}">Articles</a></li>
                           <li class="nav-item"><a class="pure-button" href="{{ url_for('projects') }}">Projects</a></li>
                           <li class="nav-item"><a class="pure-button" href="{{ url_for('about') }}">About</a></li>
@@ -33,17 +33,19 @@
             <div class="content pure-u-1 pure-u-md-3-4">
                 <div>
 
-<div>
-<h1>Sunny Day</h1>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-<p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-<p>Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-</div>
+                    <div>
 
-<hr>
-<p>This article was published on 2016-11-01.</p>
-<p><a href="..">« View all articles</a></p>
+                      {% for item in loadpost %}
+                      <h1>{{item.title}}</h1>
+                      <div class="article_format">{{item.article|safe}}</div>
+                      <p>This article was published on {{item.date_posted}}</p>
+                      {% endfor %}
+
+                    </div>
+
+                    <hr>
+                    <p>Here you can add some message.</p>
+                    <p><a href="{{ url_for('articles') }}">« View all articles</a></p>
 
                 </div>
             </div>

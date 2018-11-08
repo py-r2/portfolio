@@ -185,6 +185,10 @@ h3 {
     background: none;
 }
 
+.article_format {
+    white-space: pre-wrap;
+}
+
 @media (min-width: 48em) {
     .content {
         padding: 2em 3em 0;
