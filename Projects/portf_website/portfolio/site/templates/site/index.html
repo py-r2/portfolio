@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+
+        <title>Romeo's Python Blog and Portfolio website</title>
+
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/pure-min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/grids-responsive-min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    </head>
+    <body>
+        <div id="layout" class="pure-g">
+           <div class="sidebar pure-u-1 pure-u-md-1-4">
+             <!-- src="{{ url_for('static',filename='img/code.jpeg') }}" -->
+                <a><img src="{{ url_for('static',filename='img/portret.png') }}" alt="" class="pure-img-index"></a>
+                <div class="header-index">
+                    <h1 class="brand-title">Romeo Rauta</h1>
+                    <h2 class="brand-tagline">Python-Flask Developer</h2>
+
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a class="pure-button" href="{{ url_for('site.home') }}">Home</a></li>
+                            <li class="nav-item"><a class="pure-button" href="{{ url_for('site.articles') }}">Articles</a></li>
+                            <li class="nav-item"><a class="pure-button" href="{{ url_for('site.projects') }}">Projects</a></li>
+                            <li class="nav-item"><a class="pure-button" href="{{ url_for('site.signin') }}">Login</a></li>
+                            <li class="nav-item"><a class="pure-button" href="{{ url_for('site.about') }}">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="content pure-u-1 pure-u-md-3-4">
+                <div>
+
+
+                    <h1>Let's Build Something Cool Together</h1>
+                    <p>Hi, my name is Romeo Rauta – a Python-Flask software developer from Calgary, Canada.</p>
+                    <p>My DevOps background helped me a lot in adding programming to my skills. This evolution
+                      came like a natural organic progression and it needed a bunch of online courses (Codeacademy,
+                      Udemy etc), extensive research (Google, YouTube, Stackoverflow, GitHub etc) and hands on
+                      experience with my personal projects (you can find some of these here on my website).<br>
+                    If you wish to find the whole story you should go to this article:</p>
+
+                        <ul>
+                          <li><a href="{{ url_for('site.articles') }}">📰 How I become a Software Developer</a></li>
+                        </ul>
+
+                    <p>I’d love to help you out. Have a look at my open source projects and see what’s right for you,
+                      or just get my help with any work that involves Python, Flask, Bootstrap, Jinja, HTML, CSS,
+                      Nginx, Gunicorn, DevOps etc.</p>
+                    <h2>Work with me as a Contractor</h2>
+                    <p>Here is my work experience and contact. Don't hesitate to send me and email at any time.
+
+                      <ul>
+                        <li><a href="https://www.linkedin.com/in/romeo-rauta-070751114/">📰 Linkedin profile and contact</a></li>
+                      </ul>
+
+                    <h2>Recent Articles</h2>
+                    <p>I love writing and talking about Python. Here are a few recent articles you may want to check out:</p>
+
+                        <ul>
+                            <li><a href="{{ url_for('site.articles') }}">📰 How to build your own portfolio website »</a></li>
+                        </ul>
+
+                    <h2>A great Newsletter for Python Developers from Dan Bader, my mentor that helped me a lot in my career:</h2>
+
+                    <ul>
+                      <li><a href="https://dbader.org/newsletter">📰 Please register and get amazing weekly articles</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

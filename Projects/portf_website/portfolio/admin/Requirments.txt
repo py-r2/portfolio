@@ -1,0 +1,8 @@
+For this app to work you'll have to install the following packages:
+
+pip install flask
+pip install flask_sqlalchemy
+pip install flask_bootstrap
+pip install WTForms
+pip install flask_wtf
+pip install Werkzeug
